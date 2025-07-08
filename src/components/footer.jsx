@@ -3,6 +3,13 @@ export default function Footer() {
     <div className="bg-black text-white w-[100vw] flex justify-between h-[30vh]">
       <div>
         <div>
+          <div>
+            <button>New Game</button>
+            <div>
+              <p>HI</p>
+              <p>10</p>
+            </div>
+          </div>
           <p>0</p>
         </div>
         <p>/10</p>

@@ -1,3 +1,5 @@
+// Footer has a mini screen like design which shows the score and has an option to create a new Game
+
 export default function Footer({ gameSetter, count, high }) {
   return (
     <div className="bg-black text-white w-[100vw] flex justify-between h-[30vh]">
@@ -5,7 +7,7 @@ export default function Footer({ gameSetter, count, high }) {
         <div>
           <div>
             <button
-              onClick={gameSetter}
+              onClick={gameSetter} //When the button is clicked, A new Game Starts
             >
               New Game
             </button>

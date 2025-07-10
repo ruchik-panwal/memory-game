@@ -1,20 +1,18 @@
 import { useEffect, useState } from "react";
 import randomNumberArr from "./randomGenerator";
 
-export default function GameContent({ pokeArr }) {
-  const [count, setCount] = useState(1);
+export default function GameContent({ pokeArr, setCount, count }) {
   const [newPokeArr, setNewPokeArr] = useState([...pokeArr]);
 
   useEffect(() => {
     setNewPokeArr([...pokeArr]);
-    setCount(1);
   }, [pokeArr]);
 
   function shuffleArray(arr) {
     const randArr = randomNumberArr(0, arr.length - 1);
     return randArr.map((i) => arr[i]);
   }
-  
+
   function nextLevel(index) {
     if (!newPokeArr[index].isClicked) {
       const updatedArr = [...newPokeArr];

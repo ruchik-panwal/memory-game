@@ -8,8 +8,10 @@ import { pokeDefault } from "./storage";
 export default function App() {
   const [pokeArr, setPokeArr] = useState([...pokeDefault]);
   const [newGame, setNewGame] = useState();
+  const [count, setCount] = useState(1);
 
   useEffect(() => {
+    setCount(1);
     async function fetchData() {
       try {
         const result = await apiCaller([...pokeDefault]);
@@ -25,11 +27,14 @@ export default function App() {
     }
     fetchData();
   }, [newGame]);
-  
 
   return (
     <div className="flex flex-col items-center">
-      <GameContent pokeArr={pokeArr} />
+      <GameContent
+        pokeArr={pokeArr}
+        setCount={(c) => setCount(c)}
+        count={count}
+      />
       <Footer
         gameSetter={() => {
           newGame ? setNewGame(false) : setNewGame(true);

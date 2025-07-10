@@ -3,7 +3,7 @@ export default function Card({ pokemon, nxtLvl }) {
   return (
     <button
       onClick={nxtLvl} //Checks for clickstatus
-      className="bg-white sm:h-[200px] h-[120px] cursor-pointer"
+      className="bg-white rounded-[10%] sm:h-[200px] h-[120px] cursor-pointer"
     >
       <div className="flex justify-center items-center">
         <h1 className="absolute">{pokemon.name}</h1>

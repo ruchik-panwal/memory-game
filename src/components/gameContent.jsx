@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import randomNumberArr from "./randomGenerator"; //For Getting an array of 10 randome numbers from 1 to 10
+import randomNumberArr from "./randomGenerator"; //For Getting an array of 12 randome numbers from 1 to 12
 import Card from "./gameCard"; // Cards/Buttons
 
 // Function for the game Screen
@@ -35,10 +35,10 @@ export default function GameContent({ pokeArr, setCount, count }) {
   }
 
   // Check
-  if (count < 10)
+  if (count < 12)
     //then keep playing
     return (
-      <div className="sm:h-[70vh] w-[80vw] p-10 bg-amber-800 grid sm:grid-cols-[repeat(auto-fit,200px)] grid-cols-[repeat(2,150px)] sm:gap-[50px] gap-3 justify-center items-center ">
+      <div className="h-[70vh] sm:w-[80vw] p-10 bg-amber-800 grid sm:grid-cols-[repeat(auto-fit,200px)] grid-cols-[repeat(3,120px)] sm:gap-[50px] gap-3 justify-center items-center ">
         {newPokeArr.map((poke, ind) => (
           <Card pokemon={poke} key={ind} nxtLvl={() => nextLevel(ind)} />
         ))}

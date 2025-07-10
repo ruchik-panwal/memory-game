@@ -18,7 +18,7 @@ export default function Footer({ gameSetter, count, high }) {
           </div>
           <p>{count}</p>
         </div>
-        <p>/10</p>
+        <p>/12</p>
       </div>
 
       <div>

@@ -2,7 +2,7 @@
 
 export default function Footer({ gameSetter, count, high }) {
   return (
-    <div className="bg-black text-white w-[100vw] flex justify-between h-[30vh]">
+    <div className="bg-black text-white w-[100vw] flex justify-center sm:justify-between h-[30vh]">
       <div>
         <div>
           <div>
@@ -21,7 +21,7 @@ export default function Footer({ gameSetter, count, high }) {
         <p>/12</p>
       </div>
 
-      <div>
+      <div className="hidden sm:block">
         <div>
           <h1>MEMORY GAME</h1>
           <div>

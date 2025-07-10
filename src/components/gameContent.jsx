@@ -38,7 +38,7 @@ export default function GameContent({ pokeArr, setCount, count }) {
   if (count < 12)
     //then keep playing
     return (
-      <div className="h-[70vh] sm:w-[80vw] p-10 bg-amber-800 grid sm:grid-cols-[repeat(auto-fit,200px)] grid-cols-[repeat(3,120px)] sm:gap-[50px] gap-3 justify-center items-center ">
+      <div className="h-[70vh] box-border w-[100vw] sm:w-[80vw] p-10 bg-amber-800 grid sm:grid-cols-[repeat(auto-fit,200px)] grid-cols-[repeat(3,120px)] sm:gap-[50px] gap-3 justify-center items-center ">
         {newPokeArr.map((poke, ind) => (
           <Card pokemon={poke} key={ind} nxtLvl={() => nextLevel(ind)} />
         ))}

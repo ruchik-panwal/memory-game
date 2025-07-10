@@ -1,4 +1,4 @@
-export default function Footer({ gameSetter }) {
+export default function Footer({ gameSetter, count, high }) {
   return (
     <div className="bg-black text-white w-[100vw] flex justify-between h-[30vh]">
       <div>
@@ -11,10 +11,10 @@ export default function Footer({ gameSetter }) {
             </button>
             <div>
               <p>HI</p>
-              <p>10</p>
+              <p>{high}</p>
             </div>
           </div>
-          <p>0</p>
+          <p>{count}</p>
         </div>
         <p>/10</p>
       </div>

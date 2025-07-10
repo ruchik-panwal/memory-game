@@ -9,9 +9,10 @@ export default function App() {
   const [pokeArr, setPokeArr] = useState([...pokeDefault]);
   const [newGame, setNewGame] = useState();
   const [count, setCount] = useState(1);
+  const [highScore, setHighScore] = useState(0);
 
   useEffect(() => {
-    setCount(1);
+    setCount(0);
     async function fetchData() {
       try {
         const result = await apiCaller([...pokeDefault]);
@@ -32,13 +33,18 @@ export default function App() {
     <div className="flex flex-col items-center">
       <GameContent
         pokeArr={pokeArr}
-        setCount={(c) => setCount(c)}
+        setCount={(c) => {
+          setCount(c);
+          if (count > highScore) setHighScore(count);
+        }}
         count={count}
       />
       <Footer
         gameSetter={() => {
           newGame ? setNewGame(false) : setNewGame(true);
         }}
+        count={count}
+        high={highScore}
       />
     </div>
   );

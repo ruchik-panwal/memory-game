@@ -24,7 +24,7 @@ export default function GameContent({ pokeArr, setCount, count }) {
     }
   }
 
-  if (count < 9)
+  if (count < 10)
     return (
       <div className="sm:h-[70vh] w-[80vw] p-10 bg-amber-800 grid sm:grid-cols-[repeat(auto-fit,200px)] grid-cols-[repeat(2,150px)] sm:gap-[50px] gap-3 justify-center items-center ">
         {newPokeArr.map((poke, ind) => (

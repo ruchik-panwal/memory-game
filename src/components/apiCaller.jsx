@@ -1,5 +1,6 @@
-// This Calls the API n-times for getting pokemon
+import randomNumberArr from "./randomGenerator";
 
+// This Calls the API n-times for getting pokemon
 export async function apiCaller() {
   const ranArr = randomNumberArr(1, 500); //Array of 10 random numbers
 
@@ -11,6 +12,7 @@ export async function apiCaller() {
       return {
         name: pokeApiJson.name,
         image: pokeApiJson.sprites.front_default,
+        isClicked: false,
       };
     })
   );
@@ -18,14 +20,3 @@ export async function apiCaller() {
   return results;
 }
 
-// Generates an array of size 10 with random numbers for cards
-function randomNumberArr(min, max) {
-  const ranArr = new Set();
-
-  while (ranArr.size < 10) {
-    const num = Math.floor(Math.random() * (max - min + 1)) + min;
-    ranArr.add(num);
-  }
-
-  return Array.from(ranArr);
-}

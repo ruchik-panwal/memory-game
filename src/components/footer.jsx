@@ -1,10 +1,14 @@
-export default function Footer() {
+export default function Footer({ gameSetter }) {
   return (
     <div className="bg-black text-white w-[100vw] flex justify-between h-[30vh]">
       <div>
         <div>
           <div>
-            <button>New Game</button>
+            <button
+              onClick={gameSetter}
+            >
+              New Game
+            </button>
             <div>
               <p>HI</p>
               <p>10</p>

@@ -31,7 +31,7 @@ export default function App() {
   }, [newGame]);
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="bg-mainRed flex flex-col items-center">
       <GameContent
         pokeArr={pokeArr}
         setCount={(c) => {

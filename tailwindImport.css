@@ -6,6 +6,12 @@
     --font-teko: "Teko";
 
     --color-mainRed : #9A0707;
+    --color-footerGray : #AFAFAF;
+    --color-pokeYellow: #ffcb00;
+}
+
+body{
+    height: 100vh;
 }
 
 :root{

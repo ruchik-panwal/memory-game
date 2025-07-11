@@ -38,7 +38,7 @@ export default function GameContent({ pokeArr, setCount, count }) {
   if (count < 12)
     //then keep playing
     return (
-      <div className="h-[70vh] box-border w-[100vw] sm:w-[80vw] p-10 grid sm:grid-cols-[repeat(auto-fit,200px)] grid-cols-[repeat(3,120px)] sm:gap-[50px] gap-3 justify-center items-center ">
+      <div className="min-h-[70vh] box-border w-[100vw] p-9 sm:w-[80vw] grid sm:grid-cols-[repeat(auto-fit,200px)] grid-cols-[repeat(3,120px)] sm:grid-rows-[repeat(auto-fit,200px)] sm:gap-[50px] gap-3 justify-center items-center content-center">
         {newPokeArr.map((poke, ind) => (
           <Card pokemon={poke} key={ind} nxtLvl={() => nextLevel(ind)} />
         ))}
@@ -47,11 +47,14 @@ export default function GameContent({ pokeArr, setCount, count }) {
   else if (count == 44)
     //Lost
     return (
-      <div className="h-[70vh] flex justify-center items-center">You Lost</div>
+      <div className="h-[70vh] flex justify-center items-center font-oswald font-bold sm:text-[10rem] text-[80px] bg-pokeYellow w-full text-[#2c6cb5]">
+        You Lost
+      </div>
     );
   return (
     //Won
-    <div className="h-[70vh] flex justify-center items-center">You Won</div>
+    <div className="h-[70vh] flex justify-center items-center font-oswald font-bold sm:text-[10rem] text-[80px] bg-pokeYellow w-full text-[#2c6cb5]">
+      You Won
+    </div>
   );
 }
-

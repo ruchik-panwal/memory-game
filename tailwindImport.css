@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@theme{
+    --font-lato : "Lato";
+    --font-oswald : "Oswald";
+    --font-teko: "Teko";
+
+    --color-mainRed : #9A0707;
+}
+
+:root{
+    font-family: "Lato";
+}

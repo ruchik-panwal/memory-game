@@ -2,23 +2,23 @@
 
 export default function Footer({ gameSetter, count, high }) {
   return (
-    <div className="bg-black text-white w-[100vw] flex justify-center sm:justify-between h-[30vh]">
-      <div>
-        <div>
-          <div>
+    <div className="box-border bg-black text-white h-[300px] w-[100vw] p-8 flex justify-center sm:justify-between">
+      <div className="flex">
+        <div className="box-border bg-green-950 border-6 p-5 gap-4 flex w-[400px] justify-between items-center">
+          <div className="h-[100%] gap-3 flex flex-col items-center">
+            <div className="border-3 w-[100%] h-[100%] pt-2 flex flex-col items-center">
+              <p className="m-0">High Score</p>
+              <p className="text-[3.4rem] font-bold">{high}</p>
+            </div>
             <button
               onClick={gameSetter} //When the button is clicked, A new Game Starts
+              className="border-3 p-2 pl-4 pr-4 cursor-pointer hover:bg-green-700"
             >
               New Game
             </button>
-            <div>
-              <p>HI</p>
-              <p>{high}</p>
-            </div>
           </div>
-          <p>{count}</p>
+          <p className="font-oswald font-bold text-[12rem]">{count}</p>
         </div>
-        <p>/12</p>
       </div>
 
       <div className="hidden sm:block">
